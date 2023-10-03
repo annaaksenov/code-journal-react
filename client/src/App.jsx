@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <Journal />
+      <h1>Hello world!</h1>
     </>
   );
 }
