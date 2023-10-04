@@ -1,13 +1,16 @@
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 .container {
   max-width: 575px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
-.header {
-  background-color: #562b81;
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -18,6 +21,10 @@
   width: 100%;
 }
 
+.d-block {
+  display: block;
+}
+
 .d-flex {
   display: flex;
 }
@@ -26,8 +33,36 @@
   align-items: center;
 }
 
+.width-100 {
+  width: 100%;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2rem;
+}
+
+.text-padding {
+  padding: 0.5rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 .purple-background {
   background-color: #562b81;
+}
+
+.purple-outline {
+  outline-color: #562b81;
 }
 
 .white-text {
@@ -42,6 +77,28 @@
   text-decoration: none;
   outline: none;
   padding-left: 1rem;
+}
+
+.input-b-radius {
+  border-radius: 5px;
+}
+
+.input-height {
+  height: 2.5rem;
+}
+
+.input-b-color {
+  border: 1px solid #b6b6b6;
+}
+
+.form-image {
+  width: 100%;
+}
+
+.delete-entry-button {
+  border: none;
+  text-decoration: underline;
+  color: red;
 }
 
 @media screen and (width >= 768px) {
