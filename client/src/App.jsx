@@ -1,11 +1,11 @@
 import Journal from './Journal';
 import './App.css';
+import './Journal.css';
 
 function App() {
   return (
     <>
       <Journal />
-      <h1>Hello world!</h1>
     </>
   );
 }
