@@ -7,7 +7,12 @@ export default function EntryView() {
         </div>
       </div>
       <Form />
-      <DeleteAndSaveButton />
+      <div className="row">
+        <div className="column-full d-flex justify-between">
+          <DeleteButton />
+          <SaveButton />
+        </div>
+      </div>
     </>
   );
 }
@@ -56,17 +61,18 @@ function PreviewPhoto() {
   );
 }
 
-function DeleteAndSaveButton() {
+function DeleteButton() {
   return (
-    <div className="row">
-      <div className="column-full d-flex justify-between">
-        <button className="invisible delete-entry-button" type="button">
-          Delete Entry
-        </button>
-        <button className="input-b-radius text-padding purple-background white-text">
-          SAVE
-        </button>
-      </div>
-    </div>
+    <button className="invisible delete-entry-button" type="button">
+      Delete Entry
+    </button>
+  );
+}
+
+function SaveButton() {
+  return (
+    <button className="input-b-radius text-padding purple-background white-text">
+      SAVE
+    </button>
   );
 }
