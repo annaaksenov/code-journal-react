@@ -82,6 +82,7 @@
   text-decoration: none;
   outline: none;
   padding-left: 1rem;
+  cursor: pointer;
 }
 
 .input-b-radius {
