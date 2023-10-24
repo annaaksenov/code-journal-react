@@ -1,25 +1,26 @@
 import NavBar from './NavBar';
 import EntryView from './EntryView';
 import Entries from './Entries';
+//import { useState } from 'react';
+import data from './data';
 
-export default function Journal() {
+// false = new entry, true = entries
+export default function Journal({ currentView, setCurrentView }) {
+  console.log(data);
   return (
     <>
       <header className="purple-background">
         <div className="container">
           <div className="row">
             <div className="column-full d-flex align-center">
-              <NavBar />
+              <NavBar view={currentView} setView={setCurrentView} />
             </div>
           </div>
         </div>
       </header>
       <main>
-        <div className="container hidden">
-          <EntryView />
-        </div>
         <div className="container">
-          <Entries />
+          {currentView ? <EntryView data={data} /> : <Entries data={data} />}
         </div>
       </main>
       <Modal />

@@ -1,4 +1,7 @@
-export default function EntryView() {
+import { useState } from 'react';
+export default function EntryView({ data }) {
+  const [title, setTitle] = useState('');
+
   return (
     <>
       <div className="row">
@@ -6,7 +9,7 @@ export default function EntryView() {
           <h1>New Entry</h1>
         </div>
       </div>
-      <Form />
+      <Form title={title} setTitle={setTitle} data={data} />
       <div className="row">
         <div className="column-full d-flex justify-between">
           <DeleteButton />
@@ -17,7 +20,12 @@ export default function EntryView() {
   );
 }
 
-function Form() {
+// required fields: entryId, title, notes, photoUrl
+function Form({ title, setTitle, data }) {
+  console.log(data);
+  function handleTitleInput(e) {
+    setTitle(e.target.value);
+  }
   return (
     <form>
       <div className="row margin-bottom-1">
@@ -28,6 +36,8 @@ function Form() {
           <label className="margin-bottom-1 d-block">Title</label>
           <input
             type="text"
+            value={title}
+            onChange={handleTitleInput}
             className="input-b-color text-padding input-b-radius purple-outline input-height margin-bottom-2 d-block width-100"
           />
           <label className="margin-bottom-1 d-block">Photo URL</label>
